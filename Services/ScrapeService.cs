@@ -57,7 +57,7 @@ public class ScrapeService : IScrapeService
         }
 
 
-        var gatheredElement = from v in virtualTraversal as IEnumerable<HtmlNode>
+        IEnumerable<string> gatheredElement = from v in virtualTraversal as IEnumerable<HtmlNode>
                         select v.InnerText;
 
 

@@ -19,17 +19,15 @@ public class ScrapeController : ControllerBase
         _scrapeService = scrapeService;
     }
 
-
     [HttpGet]
     public IActionResult Get()
     {
-        return Ok(new { success = true });
+        return Ok(new { success = true,message = "It works, to do some scraping change method to POST XD" });
     }
 
     [HttpPost]
     public async Task<ActionResult<string>> Post([FromBody] ScrapeBodyDto body)
     {
-
         try
         {
 
@@ -38,7 +36,6 @@ public class ScrapeController : ControllerBase
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.Message);
             if (ex.Message.Contains("or not known")) return BadRequest(new
             {
                 message = "The website url is invalid / not reachable"

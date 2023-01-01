@@ -30,8 +30,7 @@ public class ScrapeController : ControllerBase
     {
         try
         {
-
-            var contents = await _scrapeService.ScrapeAsync(body.Website!,body.Pointer!);
+            string[] contents = await _scrapeService.ScrapeAsync(body.Website!,body.Pointer!);
             return Ok(new ScrapeResponseBodyDto { success = true, contents = contents });
         }
         catch (Exception ex)

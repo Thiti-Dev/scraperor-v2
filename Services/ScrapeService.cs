@@ -28,11 +28,7 @@ public class ScrapeService : IScrapeService
         HtmlDocument doc = new HtmlDocument();
         doc.LoadHtml(content);
 
-
-
         List<ScrapeBodyPointerLookForDto> steps = new List<ScrapeBodyPointerLookForDto>();
-
-
         ScrapeBodyPointerLookForDto? currentLookFor = pointer.LookFor;
         do
         {
@@ -43,12 +39,8 @@ public class ScrapeService : IScrapeService
 
         dynamic virtualTraversal = doc.DocumentNode.AncestorsAndSelf();
 
-        int iter = 0;
         foreach (var step in steps)
         {
-            iter++;
-            Console.WriteLine(iter);
-            Console.WriteLine(step.Tag);
             if (step.Tag != null)
             {
                 virtualTraversal = ((IEnumerable<HtmlNode>)virtualTraversal).SelectMany(x => x.Descendants(step.Tag));

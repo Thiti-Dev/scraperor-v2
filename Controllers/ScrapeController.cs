@@ -26,7 +26,7 @@ public class ScrapeController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<string>> Post([FromBody] ScrapeBodyDto body)
+    public async Task<ActionResult<ScrapeResponseBodyDto>> Post([FromBody] ScrapeBodyDto body)
     {
         try
         {

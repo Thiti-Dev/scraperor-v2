@@ -77,7 +77,7 @@ You already know what this is
 
 ## 📕 CookBook
 - The ```then_look_for``` prop can be nested infinitely
-- you can exclude the tag property if you are intending to look for (*)wildcard tag element
+- you can exclude the ```tag``` property if you are intending to look for (*)wildcard tag element
 - These 2 is in implementation backlog (too lazy for now, feel free to open PRs)
    - Custom Attribute-$LOOKUP
    - ID-$LOOKUP

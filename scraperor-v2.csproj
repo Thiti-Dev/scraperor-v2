@@ -12,6 +12,24 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Dtos\" />
+    <None Remove="Dtos\Scrape\" />
+    <None Remove="Dtos\Scrape\Bodies\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Services\" />
+    <None Remove="Dtos\Scrape\Responses\" />
+    <None Remove="HtmlAgilityPack" />
+    <None Remove="Z.Expressions.Eval" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dtos\" />
+    <Folder Include="Dtos\Scrape\" />
+    <Folder Include="Dtos\Scrape\Bodies\" />
+    <Folder Include="Services\" />
+    <Folder Include="Dtos\Scrape\Responses\" />
+  </ItemGroup>
 </Project>

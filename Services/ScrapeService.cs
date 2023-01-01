@@ -57,11 +57,11 @@ public class ScrapeService : IScrapeService
         }
 
 
-        var virtualed = from v in virtualTraversal as IEnumerable<HtmlNode>
+        var gatheredElement = from v in virtualTraversal as IEnumerable<HtmlNode>
                         select v.InnerText;
 
 
-        return virtualed.ToArray();
+        return gatheredElement.ToArray();
     }
 }
 
